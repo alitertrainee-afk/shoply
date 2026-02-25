@@ -52,8 +52,10 @@
 
 <script setup>
 import { useRoute } from "vue-router";
+import { useCartStore } from "../../../stores/cart";
 
 const route = useRoute();
+const cartStore = useCartStore();
 
 const {
   data: product,
@@ -77,6 +79,7 @@ const estimatedTotal = computed(() => {
 });
 
 const addToCart = () => {
+  cartStore.addItem(product.value, quantity.value);
   alert(`Added ${quantity.value} of ${product.value.title} to cart!`);
 };
 </script>
