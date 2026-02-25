@@ -59,7 +59,7 @@ const {
   data: product,
   pending,
   error,
-} = await useFetch(`https://fakestoreapi.com/products/${route.params.id}`);
+} = await useFetch(`/api/products/${route.params.id}`);
 
 const quantity = ref(1);
 

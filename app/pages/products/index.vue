@@ -27,11 +27,7 @@
 </template>
 
 <script setup>
-const {
-  data: products,
-  pending,
-  error,
-} = await useFetch("https://fakestoreapi.com/products");
+const { data: products, pending, error } = await useFetch("/api/products");
 </script>
 
 <style scoped>
